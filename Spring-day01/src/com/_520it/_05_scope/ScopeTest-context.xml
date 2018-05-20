@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--      <bean id="SomeBean" class="com._520it._05_scope.SomeBean" scope="prototype"></bean>
+ -->     
+ <!-- 如果有scope="prototype"，是非单例，那么就不会有自动销毁 -->
+ <bean id="SomeBean" class="com._520it._05_scope.SomeBean"
+ init-method="init" destroy-method="destory" scope="prototype"></bean>
+</beans>    

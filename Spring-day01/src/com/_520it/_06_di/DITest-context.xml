@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="someBean" class="com._520it._06_di.SomeBean" ></bean>
+
+ <bean id="otherBean" class="com._520it._06_di.OtherBean" ></bean>
+ <!-- 如果用 byType，就不能有两个com._520it._06_di.OtherBean，即使id不同也不行-->
+<!--   <bean id="otherBean2" class="com._520it._06_di.OtherBean" ></bean>
+ --> 
+<bean id="employee" class="com._520it._06_di.Employee">
+
+<!--构造器注入，如果要指定执行哪个构造器，就得加index，否则你顺序怎么变都会是找第一个先找到的  -->
+<constructor-arg name="username" value="jack" index="0"></constructor-arg>
+<constructor-arg name="id" value="1" index="1"></constructor-arg>
+
+
+
+
+
+
+<!-- <property name="id" value="1"></property>
+<property name="username" value="pao"></property>
+<property name="salary" value="10000.21"></property>
+<property name="url" value="http://www.520it.com"></property>
+
+注入复合类型的数据name+ref
+<property name="someBean" ref="someBean"></property>
+
+注入集合参数数据
+<property name="favs">
+	<array>
+	<value>A,B,C</value>
+	</array>
+
+</property>
+<property name="list">
+	<array>
+	<value>A,B,C</value>
+	</array>
+
+</property>
+
+<property name="set">
+	<set>
+	这种方式集合是这样的  set=[A,B,B]
+	<value>A,B,B</value>
+	这种方式集合是这样的  set=[A,B]
+	<value>A</value>
+	<value>B</value>
+	<value>B</value>
+	</set>
+
+</property>
+
+<property name="map">
+	<map>
+		<entry key="name" value="pao"></entry>
+		<entry key="city" value="hustou"></entry>		
+	</map>
+
+</property>
+
+<property name="props">
+	<props>
+		<prop key="name">Chris</prop>
+	</props>
+	<value>
+		name=pao
+		age=33
+	</value>
+
+</property> -->
+</bean>
+
+</beans>    

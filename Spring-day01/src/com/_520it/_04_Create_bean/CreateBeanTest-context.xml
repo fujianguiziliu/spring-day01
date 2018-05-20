@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 运用静态工厂配置 -->
+    <!-- <bean name="SomeBean" class="com._520it._04_Create_bean.SomeBeanFactory"
+    factory-method="getSomeBean">
+    </bean> -->
+    <!-- 配置工厂实例 -->
+   <!--  <bean name="SomeBeanFactory" class="com._520it._04_Create_bean.SomeBeanFactory"></bean>
+     配置SomeBean实例
+     <bean id="SomeBean2" class="com._520it._04_Create_bean.SomeBean" 
+     factory-bean="SomeBeanFactory"  factory-method="getSomeBean2"></bean>
+     -->
+     <bean id="SomeBean" class="com._520it._04_Create_bean.SomeBeanFactory"></bean>
+</beans>    

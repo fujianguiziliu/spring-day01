@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xmlns:p="http://www.springframework.org/schema/p" -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	<!--引入属性文件  -->
+	<!--NEVER： 表示永远不去系统去找对应的属性 -->
+	<context:property-placeholder location="classpath:db.properties" 
+	system-properties-mode="NEVER"/>
+ 	<!-- <bean id="ds" class="com.alibaba.druid.pool.DruidDataSource"
+ 	p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql:///jdbcdemo"
+ 	p:username="root" p:password="admin"> -->
+ 	
+ 	<bean id="ds" class="com.alibaba.druid.pool.DruidDataSource">
+ 	<property name="driverClassName" value="${db.driverClassName}"></property>
+ 	<property name="url" value="${db.url}"></property>
+ 	<property name="username" value="${db.username}"></property>
+ 	<property name="password" value="${db.password}"></property>
+ 	</bean>
+</beans>    

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 配置JavaBean对象 -->
+<bean id="helloWorld" class="com._520it._01_hello.HelloWorld">
+	<property name="username" value="世界"></property>
+
+</bean>
+<!-- id不能一样 -->
+<!-- <bean id="helloWorld" class="com._520it._01_hello.HelloWorld">
+	<property name="username" value="世界"></property>
+
+</bean>
+ -->
+ <!-- 也可以用name，name可以多个name="helloWorld,helloWorld2"，中间以，隔开或者 空格隔开 -->
+ <!-- <bean name="helloWorld,helloWorld2" class="com._520it._01_hello.HelloWorld">
+	<property name="username" value="世界"></property>
+
+</bean>
+ -->
+</beans>
